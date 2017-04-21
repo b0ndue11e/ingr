@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Ingress Events{% endblock title %}
+
+{% block content %}
+  <div class="weapon">
+    <h3 style="color: #2aabd2; font-style: italic; font-weight: bold" >Ивенты</h3>
+      <p style="font-size: 18px">В Ingress весь мир – поле боя. Две фракции неустанно сражаются за порталы – реально существующие места в нашем с вами мире.
+        Это могут быть здания или какие-то достопримечательности, скульптуры или произведения искусства. <br><br>
+    Ивенты-аномалии проходят во всей Земле. В разных городах, в разных странах, но всегда становятся событием для игроков Ingress.
+        В зависимости от стороны, захватившей большинство порталов, а, следовательно, и всю аномалию, игроки получают возможность влиять на развитие всего сюжета Ingress.
+        Участие в ивенте бесплатно. </p><br>
+      <h3>Предстоящие мероприятия:</h3>
+    <table id="modstable">
+        <thead>
+        <tr>
+            <th>Название мероприятия</th>
+            <th>Дата проведения</th>
+        </tr>
+        </thead>
+        <tbody>
+      {% for event in event_list %}
+      <tr style="font-weight: bold; font-size: 24px; text-align: center">
+          <td><a>{{ event.name }}</a></td>
+          <td>{{ event.date }}</td>
+      </tr>
+      {% endfor %}
+        </tbody>
+    </table>
+  </div>
+
+{% endblock content %}

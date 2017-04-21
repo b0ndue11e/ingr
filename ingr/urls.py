@@ -15,7 +15,20 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.http import HttpResponse, HttpResponseNotFound
+from django.shortcuts import render
+from ingr.views import index, weapon, history, contacts
+from mods.views import mods_list
+from events.views import event_list
+from weapon.views import weapons_list
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', index),
+    url(r'^event/$', event_list),
+    url(r'^mods/$', mods_list),
+    url(r'^weapon/$', weapons_list),
+    url(r'^history/$', history),
+    url(r'^contacts/$', contacts),
 ]

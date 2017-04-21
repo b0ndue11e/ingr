@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../static/images/favico.png" type="image/png">
+    <title>{% block title %}{% endblock title %}</title>
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <style>
+        body {
+            background-image: url("../static/images/bground/font5.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="searhcfield">
+    <form action="" method="post" id="search-block-form">
+      <div class="form-item">
+        <input type="text" name="" value="" maxlength="128" placeholder="Search...">
+      </div>
+      <div class="form-actions">
+        <input type="submit" name="op" value="Поиск" class="form-submit">
+      </div>
+    </form>
+    </div>
+      <div class="someheader">
+          <ul id="navbar">
+            <table id="headerlinks">
+                <tr>
+              <th><li><a href="/">Главная</a></li></th>
+              <th><li><a href="/event/">Мероприятия</a></li></th>
+              <th><li><a href="/mods/">Модификаторы</a></li></th>
+              <th><li><a href="/weapon/">Оружие</a></li></th>
+              <th><li><a href="/history/">Сюжет</a></li></th>
+              <th><li><a href="/contacts/">Контакты</a></li></th>
+              </tr>
+            </table>
+          </ul>
+      </div>
+      <br>
+  <h1>{% block content %}
+Mobile device caveats
+
+There are some caveats regarding using form controls within fixed elements on mobile devices. See our browser support docs for details.
+Always add labels
+
+Screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the .sr-only class. There are further alternative methods of providing a label for assistive technologies, such as the aria-label, aria-labelledby or title attribute. If none of these is present, screen readers may resort to using the placeholder attribute, if present, but note that use of placeholder as a replacement for other labelling methods is not advised.
+
+Mobile device caveats
+
+There are some caveats regarding using form controls within fixed elements on mobile devices. See our browser support docs for details.
+Always add labels
+
+Screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the .sr-only class. There are further alternative methods of providing a label for assistive technologies, such as the aria-label, aria-labelledby or title attribute. If none of these is present, screen readers may resort to using the placeholder attribute, if present, but note that use of placeholder as a replacement for other labelling methods is not advised.
+
+Mobile device caveats
+
+There are some caveats regarding using form controls within fixed elements on mobile devices. See our browser support docs for details.
+Always add labels
+
+Screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the .sr-only class. There are further alternative methods of providing a label for assistive technologies, such as the aria-label, aria-labelledby or title attribute. If none of these is present, screen readers may resort to using the placeholder attribute, if present, but note that use of placeholder as a replacement for other labelling methods is not advised.
+
+Mobile device caveats
+
+There are some caveats regarding using form controls within fixed elements on mobile devices. See our browser support docs for details.
+Always add labels
+
+Screen readers will have trouble with your forms if you don't include a label for every input. For these inline forms, you can hide the labels using the .sr-only class. There are further alternative methods of providing a label for assistive technologies, such as the aria-label, aria-labelledby or title attribute. If none of these is present, screen readers may resort to using the placeholder attribute, if present, but note that use of placeholder as a replacement for other labelling methods is not advised.
+{% endblock content %}
+  </h1>
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<div class="wrapper">
+  <div class="content"></div>
+  <div class="footer"><p>По вопросам разработки и продвижения сайтов обращаться по адресу:
+  г.Харьков ул.Харьковская 99б Офис 816<br>
+  Харьковский А.В. тел.716-00-00 моб.+38(073)000-00-00</p>
+  <div class="share42init"></div>
+<script type="text/javascript" src="../static/share42/share42.js"></script>
+    <a href="#" title="Вернуться к началу страницы" class="topNubex">Вверx</a>
+  </div>
+</div>
+  </body>
+</html>

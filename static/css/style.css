@@ -1,0 +1,211 @@
+
+#navbar {
+  list-style-type: none;
+}
+#navbar li { display: inline; }
+
+.someheader {
+    margin: 30px;
+    width: 100%;
+    display: inline-flex;
+    height: 25%;
+}
+
+#bg { position: fixed; top: 0; left: 0; }
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+
+#headerlinks {
+    width: 75%;
+    font-size: 24px;
+
+}
+#headerlinks th {
+    width: 300px;
+    text-align: center;
+}
+.form {
+    width:auto;
+    margin-right: 35px;
+}
+
+#searhcfield {
+    margin-top: 10px;
+}
+
+
+#search-block-form {
+    position: absolute;
+    right: 35px;
+    width:248px;
+    height:30px;
+    border-radius:15px;
+    border: #3c3c3c solid 3px;
+    background: left top repeat-x;
+    }
+.focus-active{
+    border-color:#aaa !important;
+    background:#fff !important;
+    }
+#search-block-form input{
+    padding:0;
+    margin:0;
+    display:block;
+    border:none;
+    outline:none;
+    background:none;
+    width:100%;
+    height:100%;
+    }
+#search-block-form .form-actions{
+    width:30px;
+    height:30px;
+    float:left;
+    background: 5px 2px no-repeat;
+    }
+#search-block-form .form-actions input:hover{
+    cursor:pointer;
+    }
+#search-block-form .form-actions input{
+    overflow:hidden;
+    text-indent:-9999px;
+    }
+#search-block-form .form-item{
+    width:210px;
+    padding:0px 5px;
+    float:right;
+    height:30px;
+    }
+#search-block-form .form-item input{
+    font:13px/16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #2aabd2;
+    height:auto !important;
+    padding:6px 0;
+    font-size: 16px;
+    }
+.placeholder{color: #3c3c3c !important;}
+
+.ss {
+ -webkit-filter: blur(1px);
+ filter: blur(1px);
+
+}
+
+.historycontent {
+    font-size: 18px;
+    color: white;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.name {
+    color: #2aabd2;
+    font-style: oblique;
+    font-weight: 800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 35%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+    background-color: #46b8da;
+    font-style: oblique;
+    position: fixed;
+    bottom: 0;
+    margin: 0px;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+.topNubex {
+	position: fixed;
+	right: 45px;
+	bottom: 45px;
+   }
+
+.weapon {
+    color: white;
+    margin: 60px;
+    margin-top: 15px;
+}
+
+.weaponimage {
+    float: right;
+    margin: 5px 0 5px 5px;
+}
+ul {
+    list-style: circle outside;
+    font-size: 14px;
+}
+#weapontable {
+    margin-left: 100px;
+    color: white;
+    font-size: 14px;
+    border: 4px double white;
+    width: 50%;
+    border-collapse: collapse;
+}
+
+
+#weapontable th {
+    text-align: center;
+    border: 2px solid white;
+    border-collapse: collapse;
+}
+
+#weapontable tr {
+    padding: 5px;
+    border: 2px solid white;
+}
+
+#weapontable td {
+    padding: 5px;
+    border: 2px solid white;
+}
+#modstable {
+    margin-left: 40px;
+    color: white;
+    font-size: 14px;
+    border: 4px double white;
+    width: 90%;
+    border-collapse: collapse;
+}
+
+
+#modstable th {
+    text-align: center;
+    border: 2px solid white;
+    border-collapse: collapse;
+}
+
+#modstable tr {
+    padding: 5px;
+    border: 2px solid white;
+}
+
+#modstable td {
+    padding: 5px;
+    border: 2px solid white;
+}
+
+.mainpage {
+    color: white;
+    margin: 60px;
+    margin-top: 15px;
+    font-size: 18px;
+}

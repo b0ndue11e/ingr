@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'mods',
     'weapon',
     'events'
+
 ]
 
 MIDDLEWARE = [
@@ -108,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
 
@@ -135,3 +136,5 @@ TEMPLATES = [
                                      'django.contrib.auth.context_processors.auth',
                                      'django.contrib.messages.context_processors.messages']}}
 ]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images/')
+MEDIA_URL = "/static/images/"

@@ -5,24 +5,24 @@
 {% block content %}
     <div class="weapon">
     <h3 style="color: #2aabd2; font-style: italic; font-weight: bold" >Мод</h3>
-      <p style="font-size: 18px"><span style="font-weight: bold">Мод</span> (Портальный модификатор, англ. mod) — специальный предмет,
+      <p style="font-size: 18px; margin-left: 40px"><span style="font-weight: bold">Мод</span> (Портальный модификатор, англ. mod) — специальный предмет,
           который используется для улучшения портала. У каждого портала есть 4 ячейки для модов,
           в каждый из которых можно установить только 1 мод.
           Один игрок без перекрашивания может установить в один портал не более двух модов.  </p>
     <h4 style="color: #2aabd2; font-size: 22px">Степень редкости:</h4>
-      <p style="font-size: 18px; padding-left: 5px">Моды делятся по степени редкости (рарности, от англ. "rare").
+      <p style="font-size: 18px; margin-left: 40px">Моды делятся по степени редкости (рарности, от англ. "rare").
           Каждой степени соответствует определённый цвет. </p>
-      <ul style="margin-left: 40px">
+      <ul style="margin-left: 80px">
         <li style="background-color: green; font-weight: bold; width: 125px">Частый(common)</li><br>
         <li style="background-color: darkslateblue; width: 150px; font-weight: bold">Редкий(рарный,rare)</li><br>
         <li style="background-color: violet; font-weight: bold; width: 225px">Очень редкий(вр-ный,very rare)</li><br>
       </ul>
-        <p style="font-size: 14px; margin-left: 40px">Как нетрудно догадаться, этот параметр показывает,
+        <p style="font-size: 18px; margin-left: 40px">Как нетрудно догадаться, этот параметр показывает,
             какова вероятность получить тот или иной мод при взломе портала. Также это говорит об их эффективности:
             наиболее эффективными являются очень редкие моды и наоборот.</p><br>
 <table id="modstable">
         <thead>
-        <tr  style="font-weight: bold; font-size: 24px; text-align: center">
+        <tr style="font-weight: bold; font-size: 22px; text-align: center">
             <th>Модификатор</th>
             <th>Сокращение</th>
             <th>Описание</th>
@@ -37,7 +37,7 @@
       <tr>
           <td style="font-size: 20px; font-weight: bold; text-align: center"><a>{{ mod.name }}</a></td>
           <td style="font-size: 20px; font-weight: bold; text-align: center">{{ mod.short_name }}</td>
-          <td>{{ mod.descriprion }}</td>
+          <td style="font-size: 18px">{{ mod.descriprion }}</td>
           <td style="text-align: center">{{ mod.common }}</td>
           <td style="text-align: center">{{ mod.rare }}</td>
           <td style="text-align: center">{{ mod.very_rare }}</td>
@@ -48,13 +48,13 @@
     </table>
     <h6 style="font-size: 24px">Установка мода</h6>
         {% for instruction in instructions_list %}
-      <p style="font-size: 14px; margin-left: 40px">{{ instruction.deploy }}</p><br>
+      <p style="font-size: 18px; margin-left: 40px">{{ instruction.deploy }}</p><br>
         {% endfor %}
     <h6 style="font-size: 24px">Применение</h6>
         {% for instruction in instructions_list %}
-      <p style="font-size: 14px; margin-left: 40px">{{ instruction.practice }}</p><br>
+      <p style="font-size: 18px; margin-left: 40px">{{ instruction.practice }}</p><br>
         {% endfor %}
     <h6 style="font-size: 24px">Энергетическая ценность</h6>
-      <p style="font-size: 24px; margin-left: 40px">Переработка даёт 40/80/120ХМ в зависимости от степени редкости мода.
+      <p style="font-size: 18px; margin-left: 40px">Переработка даёт 40/80/120ХМ в зависимости от степени редкости мода.
     </div>
 {% endblock content %}

@@ -7,5 +7,6 @@ class Event(models.Model):
     registration = models.BooleanField(help_text='Регистрация на мероприятие: обзательна или нет')
     location = models.CharField(max_length=255, help_text='Место проведения мероприятия')
 
+
     def __str__(self):
         return self.name

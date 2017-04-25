@@ -4,13 +4,15 @@
     <list default="true" id="feb7a47c-ece8-448c-ba44-725c6f1d7ade" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ingr/settings.py" afterPath="$PROJECT_DIR$/ingr/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ingr/urls.py" afterPath="$PROJECT_DIR$/ingr/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/admin.py" afterPath="$PROJECT_DIR$/mods/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/models.py" afterPath="$PROJECT_DIR$/mods/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/views.py" afterPath="$PROJECT_DIR$/mods/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/models.py" afterPath="$PROJECT_DIR$/events/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/event.html" afterPath="$PROJECT_DIR$/templates/event.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mods.html" afterPath="$PROJECT_DIR$/templates/mods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/weapon.html" afterPath="$PROJECT_DIR$/templates/weapon.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weapon/admin.py" afterPath="$PROJECT_DIR$/weapon/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weapon/models.py" afterPath="$PROJECT_DIR$/weapon/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weapon/views.py" afterPath="$PROJECT_DIR$/weapon/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,8 +27,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ingr/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+            <state relative-caret-position="360">
+              <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
               <folding>
                 <element signature="e#638#670#0" expanded="true" />
               </folding>
@@ -44,55 +46,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mods/views.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/events/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="84" lean-forward="true" selection-start-line="7" selection-start-column="84" selection-end-line="7" selection-end-column="84" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mods.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/mods.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
-              <folding>
-                <element signature="e#1578#1640#0#HTML" expanded="true" />
-                <element signature="e#1960#2022#0#HTML" expanded="true" />
-                <element signature="e#2064#2126#0#HTML" expanded="true" />
-                <element signature="e#2208#2234#0#HTML" expanded="true" />
-                <element signature="e#2271#2297#0#HTML" expanded="true" />
-                <element signature="e#2332#2358#0#HTML" expanded="true" />
-                <element signature="e#2609#2651#0#HTML" expanded="true" />
-                <element signature="e#2983#3025#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mods/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="220">
+              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mods/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -115,20 +74,22 @@
         <option value="$PROJECT_DIR$/templates/404.html" />
         <option value="$PROJECT_DIR$/templates/500.html" />
         <option value="$PROJECT_DIR$/ingr/views.py" />
-        <option value="$PROJECT_DIR$/templates/weapon.html" />
-        <option value="$PROJECT_DIR$/weapon/views.py" />
         <option value="$PROJECT_DIR$/events/admin.py" />
-        <option value="$PROJECT_DIR$/events/models.py" />
-        <option value="$PROJECT_DIR$/weapon/models.py" />
-        <option value="$PROJECT_DIR$/weapon/admin.py" />
         <option value="$PROJECT_DIR$/events/views.py" />
-        <option value="$PROJECT_DIR$/templates/event.html" />
         <option value="$PROJECT_DIR$/ingr/settings.py" />
         <option value="$PROJECT_DIR$/mods/admin.py" />
         <option value="$PROJECT_DIR$/mods/models.py" />
         <option value="$PROJECT_DIR$/ingr/urls.py" />
         <option value="$PROJECT_DIR$/mods/views.py" />
+        <option value="$PROJECT_DIR$/templates/event.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/mods.html" />
+        <option value="$PROJECT_DIR$/weapon/admin.py" />
+        <option value="$PROJECT_DIR$/weapon/views.py" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/weapon/models.py" />
+        <option value="$PROJECT_DIR$/templates/weapon.html" />
+        <option value="$PROJECT_DIR$/events/models.py" />
       </list>
     </option>
   </component>
@@ -182,21 +143,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mods" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ingr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ingr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ingr" />
+              <option name="myItemId" value="events" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -494,16 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weapon/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="65" lean-forward="false" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/events/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -530,11 +467,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weapon/models.py">
+    <entry file="file://$PROJECT_DIR$/templates/event.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="480">
+          <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding>
+            <element signature="e#919#981#0#HTML" expanded="false" />
+            <element signature="e#1314#1340#0#HTML" expanded="false" />
+            <element signature="e#1377#1403#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mods/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -546,54 +497,139 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/weapon.html">
+    <entry file="file://$PROJECT_DIR$/mods/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="58" column="16" lean-forward="false" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+        <state relative-caret-position="140">
+          <caret line="7" column="88" lean-forward="false" selection-start-line="7" selection-start-column="88" selection-end-line="7" selection-end-column="88" />
           <folding>
-            <marker date="1492603752183" expanded="false" signature="1626:1641" ph="..." />
-            <marker date="1492603752183" expanded="false" signature="1697:1714" ph="..." />
-            <marker date="1492603752183" expanded="false" signature="2185:2215" ph="..." />
-            <marker date="1492603752183" expanded="false" signature="2237:2272" ph="..." />
-            <marker date="1492603752183" expanded="false" signature="2991:3006" ph="..." />
-            <marker date="1492603752183" expanded="true" signature="3108:3142" ph="..." />
-            <marker date="1492603752183" expanded="false" signature="4136:4166" ph="..." />
-            <marker date="1492603752183" expanded="false" signature="4188:4223" ph="..." />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/event.html">
+    <entry file="file://$PROJECT_DIR$/mods/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-          <folding>
-            <element signature="e#1092#1154#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="161" column="1" lean-forward="false" selection-start-line="161" selection-start-column="1" selection-end-line="161" selection-end-column="1" />
+        <state relative-caret-position="220">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="15" selection-end-column="75" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="43" column="82" lean-forward="true" selection-start-line="43" selection-start-column="82" selection-end-line="43" selection-end-column="82" />
+          <folding>
+            <element signature="e#3920#3976#0#HTML" expanded="true" />
+            <element signature="e#5741#5797#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingr/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding>
+            <element signature="e#638#670#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/weapon/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="20">
+          <caret line="1" column="45" lean-forward="true" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/events/models.py">
+    <entry file="file://$PROJECT_DIR$/weapon/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        <state relative-caret-position="160">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/history.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weapon/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="204" column="1" lean-forward="true" selection-start-line="204" selection-start-column="1" selection-end-line="204" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/weapon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+          <folding>
+            <element signature="e#218#260#0#HTML" expanded="true" />
+            <element signature="e#371#410#0#HTML" expanded="true" />
+            <element signature="e#721#783#0#HTML" expanded="true" />
+            <element signature="e#1043#1105#0#HTML" expanded="true" />
+            <element signature="e#1143#1166#0#HTML" expanded="true" />
+            <element signature="e#1211#1254#0#HTML" expanded="true" />
+            <element signature="e#1485#1527#0#HTML" expanded="true" />
+            <element signature="e#1565#1607#0#HTML" expanded="true" />
+            <element signature="e#1651#1693#0#HTML" expanded="true" />
+            <element signature="e#1752#1775#0#HTML" expanded="true" />
+            <element signature="e#1855#1876#0#HTML" expanded="true" />
+            <element signature="e#1942#1963#0#HTML" expanded="true" />
+            <element signature="e#2029#2050#0#HTML" expanded="true" />
+            <element signature="e#2116#2137#0#HTML" expanded="true" />
+            <element signature="e#2228#2251#0#HTML" expanded="true" />
+            <element signature="e#2272#2314#0#HTML" expanded="true" />
+            <element signature="e#2613#2636#0#HTML" expanded="true" />
+            <element signature="e#2711#2737#0#HTML" expanded="true" />
+            <element signature="e#2764#2802#0#HTML" expanded="true" />
+            <element signature="e#2816#2859#0#HTML" expanded="true" />
+            <element signature="e#3568#3591#0#HTML" expanded="true" />
+            <element signature="e#3707#3733#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mods.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="46" column="16" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+          <folding>
+            <element signature="e#212#254#0#HTML" expanded="true" />
+            <element signature="e#261#286#0#HTML" expanded="true" />
+            <element signature="e#693#735#0#HTML" expanded="true" />
+            <element signature="e#871#896#0#HTML" expanded="true" />
+            <element signature="e#1254#1296#0#HTML" expanded="true" />
+            <element signature="e#1596#1658#0#HTML" expanded="true" />
+            <element signature="e#1978#2040#0#HTML" expanded="true" />
+            <element signature="e#2082#2144#0#HTML" expanded="true" />
+            <element signature="e#2185#2208#0#HTML" expanded="true" />
+            <element signature="e#2250#2276#0#HTML" expanded="true" />
+            <element signature="e#2313#2339#0#HTML" expanded="true" />
+            <element signature="e#2374#2400#0#HTML" expanded="true" />
+            <element signature="e#2651#2693#0#HTML" expanded="true" />
+            <element signature="e#2856#2898#0#HTML" expanded="true" />
+            <element signature="e#3025#3067#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -605,58 +641,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mods/admin.py">
+    <entry file="file://$PROJECT_DIR$/events/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mods/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        <state relative-caret-position="220">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingr/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-          <folding>
-            <element signature="e#638#670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mods/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="84" lean-forward="true" selection-start-line="7" selection-start-column="84" selection-end-line="7" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mods.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
-          <folding>
-            <element signature="e#1578#1640#0#HTML" expanded="true" />
-            <element signature="e#1960#2022#0#HTML" expanded="true" />
-            <element signature="e#2064#2126#0#HTML" expanded="true" />
-            <element signature="e#2208#2234#0#HTML" expanded="true" />
-            <element signature="e#2271#2297#0#HTML" expanded="true" />
-            <element signature="e#2332#2358#0#HTML" expanded="true" />
-            <element signature="e#2609#2651#0#HTML" expanded="true" />
-            <element signature="e#2983#3025#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

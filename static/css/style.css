@@ -153,11 +153,11 @@ ul {
     font-size: 14px;
 }
 #weapontable {
-    margin-left: 100px;
+    margin-left: 40px;
     color: white;
     font-size: 14px;
     border: 4px double white;
-    width: 50%;
+    width: 90%;
     border-collapse: collapse;
 }
 
@@ -191,10 +191,11 @@ ul {
     text-align: center;
     border: 2px solid white;
     border-collapse: collapse;
+    padding: 5px;
 }
 
 #modstable tr {
-    padding: 5px;
+    padding: 10px;
     border: 2px solid white;
 }
 
@@ -208,4 +209,10 @@ ul {
     margin: 60px;
     margin-top: 15px;
     font-size: 18px;
+}
+#gameplaytable {
+    border-collapse: separate;
+    padding: 10px;
+    text-align: center;
+    width: 90%;
 }

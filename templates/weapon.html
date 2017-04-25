@@ -5,41 +5,56 @@
 {% block content %}
   <div class="weapon">
     <h3 style="color: #2aabd2; font-style: italic; font-weight: bold" >Описание</h3>
-      <p style="font-size: 18px">Оружие используется для уничтожения вражеских резонаторов
+      <p style="font-size: 18px; margin-left: 40px">Оружие используется для уничтожения вражеских резонаторов
           и захвата порталов (вирусы). </p>
     <h4 style="color: #2aabd2; font-size: 22px">Типы оружия:</h4>
-      <p style="font-size: 18px; padding-left: 5px">Оружие делится на два вида:</p>
     <table style="margin-left: 40px">
-      <col width="80%">
-        <tr>
-          <th style="font-size: 20px; color: #2aabd2; width: 50%">Разрушающее</th>
-          <th style="font-size: 20px; color: #2aabd2; width: 50%">Захватывающее</th>
-        </tr>
-        <tr style="margin-top: 10px">
-          <td style="font-size: 14px"><p>Детонатор ХМР</p>
-            <p>Ультра ХМР</p>
-          </td>
-          <td style="font-size: 14px"><p>Преобразлователь Ады</p>
-            <p>Вирус Джарвиса</p>
-          </td>
-        </tr>
+        <tr><th style="font-size: 20px; color: #2aabd2; width: 50%">Разрушающее</th></td>
+        <tr><th style="font-size: 20px; color: #2aabd2; width: 50%">Захватывающее</th></td>
     </table><br>
-    <h4 style="color: #2aabd2">Разрушающее оружие</h4><br>
-    <!--<h6 style="font-size: 24px">Детонатор ХМР</h6>
-    <img class="weaponimage" src="../static/images/weapons/xmp.png">
-      <p style="font-size: 14px; margin-left: 40px">Используется для уничтожения резонаторов на порталах соперников.<br>
-          Агент не может использовать оружие уровнем выше, чем свой текущий.<br>
-          По характеру действия Детонатор XMP выпускает взрывную волну определенного радиуса и урона
-          в зависимости от уровня с затуханием по мере увеличения расстояния. </p>
-      <p style="font-size: 20px">Для активации оружия есть 2 способа:
-      <ul style="margin-left: 40px">
-      <li>C экрана сканера. После долгого тапа по экрану, откроется меню, в нем выбираем пункт "ВЫСТРЕЛИТЬ XMP"
-          (англ. "FIRE XMP").<br>
-         Взяв необходимое оружие, жмем "ОГОНЬ!" (англ. "FIRE");</li>
-      <li>Из инвентаря: "МЕНЮ" -> "Инвентарь" -> "Оружие" (англ. "OPS" -> "Inventory" -> "Weapons").
-        Выбираем необходимое оружие, жмем "Выстрелить" (англ. "FIRE")</li>
-      </ul><br>
-    <table id="weapontable">
+  <table id="weapontable">
+      <thead>
+          <tr style="font-weight: bold; font-size: 22px; text-align: center">
+              <th>Название оружия</th>
+              <th>Описание оружия</th>
+              <th>Тип оружия</th>
+              <th>Изображение</th>
+          </tr>
+      </thead>
+      <tbody>
+      {% for weapon in weapons_list %}
+        <tr>
+          <td style="font-size: 20px; font-weight: bold; text-align: center">{{ weapon.name }}</td>
+          <td style="font-size: 18px">{{ weapon.description }}</td>
+          <td style="font-size: 18px; text-align: center">{{ weapon.type }}</td>
+          <td><img src="{{ weapon.image.url }}" </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+  </table><br>
+  {% for instruction in instuctions_list %}
+      <h3 >{{ instruction.name }}</h3>
+    <p style="font-size: 18px; margin-left: 40px">{{ instruction.xmp_use }}</p>
+    <p style="font-size: 18px; margin-left: 40px">{{ instruction.ultra_xmp_use }}</p>
+    <p style="font-size: 18px; margin-left: 40px">{{ instruction.virus_use }}</p><br>
+
+  {% endfor %}
+  <h6 style="font-size: 24px">Примеры</h6>  
+      <table id="gameplaytable">
+          <tr>
+            <td style="padding: 10px"><img src="../static/images/gameplay/1.png"></td>
+            <td style="padding: 10px"><img src="../static/images/gameplay/2.png"></td>
+            <td style="padding: 10px"><img src="../static/images/gameplay/3.png"></td>
+            <td style="padding: 10px"><img src="../static/images/gameplay/4.png"></td>
+          </tr>
+        </table>
+    <h6 style="font-size: 24px">Бонус</h6>
+      <p style="font-size: 18px; margin-left: 40px">Начиная с обновления 1.39.2 доступен новый режим огня - "с бонусом".
+          Для активации нажмите и держите кнопку огня. Чем ближе к игроку будут "частицы" в момент отпускания кнопки -
+          тем больше бонус для урона вы получите.
+          Максимальный бонус составляет 20%. </p><br>
+  <h6 style="font-size: 24px">Урон от использования детонатора ХМР</h6><br>
+    <table id="weapontable" style="text-align: center">
         <col width="50%" style="float: left; margin-left: 60px">
         <tr style="background: #2e6da4; color: #0f0f0f">
           <th>Уровень ХМР</th><th>Дальность урона</th>
@@ -54,53 +69,8 @@
         <tr><td>7</td><td>138 метров</td><td>1800</td><td>490</td></tr>
         <tr><td>8</td><td>168 метров</td><td>2700</td><td>640</td></tr>
     </table><br>
-    <h6 style="font-size: 24px">Ультра ХМР</h6>
-    <img class="weaponimage" src="../static/images/weapons/us.png">
-      <p style="font-size: 14px; margin-left: 40px">Работает по тому же принципу, что и Детонатор XMP.
-          Обладает ничтожным радиусом поражения (L8 - 30 м). Рекомендованы при использовании в центре
-          портала для быстрого сноса модификаций портала (включая щиты).<br> Так как все ваши действия (установка,
-          уничтожение резонаторов) транслируются в чат (англ. "COMM"), можно воспользоваться преимуществом Ультра XMP -
-          малым радиусом действия. При активации прямо в центре портала владельцы резонаторов не получат сообщение об
-          атаке, если резонаторы стоят вне зоны поражения Ультра XMP.<br> Таким образом можно уничтожить щиты не поднимая шум
-          (в качестве противодействия в центр портала также ставят резонатор). Хотя по резонаторам ультразвук наносит
-          тот же урон, что и бомбы, уничтожить модификацию портала с помощью ультразвука получится намного быстрее,
-          чем с помощью бомб. <br> Шанс выпадения ~5%.  </p><br>
-    <table id="weapontable">
-        <col width="50%" style="float: left; margin-left: 60px">
-        <tr style="background: #2e6da4; color: #0f0f0f">
-          <th>Уровень Ультра ХМP</th><th>Дальность урона</th>
-          <th>Сила урона</th><th>Необходимый ХМ</th>
-        </tr>
-        <tr><td>1</td><td>10 метров</td><td>150</td><td>20</td></tr>
-        <tr><td>2</td><td>13 метров</td><td>300</td><td>40</td></tr>
-        <tr><td>3</td><td>16 метров</td><td>500</td><td>60</td></tr>
-        <tr><td>4</td><td>18 метров</td><td>900</td><td>80</td></tr>
-        <tr><td>5</td><td>21 метр</td><td>1200</td><td>100</td></tr>
-        <tr><td>6</td><td>24 метра</td><td>1500</td><td>120</td></tr>
-        <tr><td>7</td><td>27 метров</td><td>1800</td><td>140</td></tr>
-        <tr><td>8</td><td>30 метров</td><td>2700</td><td>160</td></tr>
-    </table><br>-->
-      {% for weapon in weapons_list %}
-      <p>{{ weapon.name }}</p>
-      {% endfor %}
-    <h6 style="font-size: 24px">Бонус</h6>
-      <p style="font-size: 14px; margin-left: 40px">Начиная с обновления 1.39.2 доступен новый режим огня - "с бонусом".
-          Для активации нажмите и держите кнопку огня. Чем ближе к игроку будут "частицы" в момент отпускания кнопки -
-          тем больше бонус для урона вы получите.
-          Максимальный бонус составляет 20%. </p><br>
-    <h4 style="color: #2aabd2">Захватывающее оружие(Вырусы, краски)</h4><br>
-      <h6 style="font-size: 24px">Преобразователь Ады(ADA Refactor, ADA)</h6>
-    <img class="weaponimage" src="../static/images/weapons/ADA.png">
-      <p style="font-size: 14px; margin-left: 40px">ADA — позволяет быстро и безболезненно захватить вражеский портал.
-          При применении на зелёный портал уничтожает все линки и поля, относящиеся к порталу. Резонаторы же переходят
-          во владение игроку, использовавшему ADA.
-Используя Jarvis Virus и ADA Refactor необходимо потратить большое количество XM.  </p><br><br>
-      <h6 style="font-size: 24px">Вирус Джарвиса(Jarvis)</h6>
-    <img class="weaponimage" src="../static/images/weapons/Jarvis.png">
-      <p style="font-size: 14px; margin-left: 40px">JV — позволяет быстро и безболезненно захватить вражеский портал.
-          При применении на синий портал уничтожает все линки и поля, относящиеся к порталу.
-          Резонаторы же переходят во владение игроку, использовавшему JV.</p><br><br><br>
-    <table id="weapontable">
+  <h6 style="font-size: 24px">Необходимое количество ХМ для использования вируса на порталах разного уровня</h6><br>
+    <table id="weapontable" style="text-align: center">
         <col width="50%" style="float: left; margin-left: 60px">
         <tr style="background: #2e6da4; color: #0f0f0f">
           <th>Уровень портала</th><th>Необходимое кличество ХМ</th>

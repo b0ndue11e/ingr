@@ -13,17 +13,18 @@
       <h3>Предстоящие мероприятия:</h3>
     <table id="modstable">
         <thead>
-        <tr>
+        <tr style="font-weight: bold; font-size: 22px; text-align: center">
             <th>Название мероприятия</th>
             <th>Дата проведения</th>
+            <th>Место проведения</th>
         </tr>
         </thead>
         <tbody>
       {% for event in event_list %}
-      <tr style="font-weight: bold; font-size: 24px; text-align: center">
-          <td><a>{{ event.name }}</a></td>
-          <td>{{ event.date }}</td>
-          <td>{{ event.location }}</td>
+      <tr>
+          <td style="font-size: 20px; font-weight: bold; text-align: center"><a>{{ event.name }}</a></td>
+          <td style="text-align: center">{{ event.date }}</td>
+          <td style="text-align: center">{{ event.location }}</td>
       </tr>
       {% endfor %}
         </tbody>

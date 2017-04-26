@@ -216,3 +216,31 @@ ul {
     text-align: center;
     width: 90%;
 }
+
+#reg {
+    margin-left: 80px;
+    font-size: 18px;
+    color: #2aabd2;
+    font-weight: bold;
+}
+
+#inputfield {
+    background-color: transparent;
+    color: white;
+    border: solid;
+    border-radius: 8px;
+}
+
+#regtable td {
+    padding: 10px;
+}
+
+#regbutton {
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 200px;
+    border: solid;
+    border-radius: 8px;
+    border-color: white;
+}

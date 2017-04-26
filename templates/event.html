@@ -17,6 +17,7 @@
             <th>Название мероприятия</th>
             <th>Дата проведения</th>
             <th>Место проведения</th>
+            <th>Регистрация</th>
         </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@
           <td style="font-size: 20px; font-weight: bold; text-align: center"><a>{{ event.name }}</a></td>
           <td style="text-align: center">{{ event.date }}</td>
           <td style="text-align: center">{{ event.location }}</td>
+          <td style="text-align: center"><a href="/reg/">Принять участие</a></td>
       </tr>
       {% endfor %}
         </tbody>

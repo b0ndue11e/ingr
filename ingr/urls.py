@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.http import HttpResponse, HttpResponseNotFound
 from . import views
 from mods.views import mods_list
-from events.views import event_list
+from events.views import event_list, event_detail
 from weapon.views import weapons_list
 
 urlpatterns = [
@@ -30,4 +30,5 @@ urlpatterns = [
     url(r'^weapon/$', weapons_list),
     url(r'^history/$', views.history),
     url(r'^contacts/$', views.contacts),
+    url(r'^event/detail/$', event_detail)
 ]

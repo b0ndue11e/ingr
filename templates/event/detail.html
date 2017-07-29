@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}{{ event.0.name }}{% endblock title %}
+
+{% block content %}
+  <div class="weapon">
+     <h1>Мероприятие:</h1>
+    <h3>{{ event.0.name }}</h3>
+    {{ event.0.description }}
+  </div>
+
+{% endblock content %}

@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load staticfiles %}
 
 {% block title %}Ingress Events{% endblock title %}
 
@@ -12,28 +11,26 @@
         В зависимости от стороны, захватившей большинство порталов, а, следовательно, и всю аномалию, игроки получают возможность влиять на развитие всего сюжета Ingress.
         Участие в ивенте бесплатно. </p><br>
       <h3>Предстоящие мероприятия:</h3>
-  {% if  event_list %}
     <table id="modstable">
         <thead>
         <tr style="font-weight: bold; font-size: 22px; text-align: center">
             <th>Название мероприятия</th>
             <th>Дата проведения</th>
             <th>Место проведения</th>
+            <th>Регистрация</th>
         </tr>
         </thead>
         <tbody>
       {% for event in event_list %}
       <tr>
-          <td style="font-size: 20px; font-weight: bold; text-align: center"><a href="/event/detail/">{{ event.name }}</a></td>
+          <td style="font-size: 20px; font-weight: bold; text-align: center"><a href="event_detail.html">{{ event.name }}</a></td>
           <td style="text-align: center">{{ event.date }}</td>
           <td style="text-align: center">{{ event.location }}</td>
+          <td style="text-align: center"><a href="/reg/">Принять участие</a></td>
       </tr>
       {% endfor %}
         </tbody>
     </table>
-  {% else %}
-  <h5>К сожалению не одного мероприятия на ближайшее время не запланировано</h5>
-  {% endif %}
   </div>
 
 {% endblock content %}

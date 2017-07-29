@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseNotFound
 from django import forms
 from django.contrib import messages
-from events.models import EventReg
+from events.models import EventReg, Event
 
 def index(request):
     return render(request, 'index.html')

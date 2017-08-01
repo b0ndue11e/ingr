@@ -1,5 +1,4 @@
 from django.db import models
-from django.conf import settings
 
 class Event(models.Model):
     name = models.CharField(max_length=200, unique=True, help_text='Название мероприятия')

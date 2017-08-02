@@ -12,7 +12,7 @@
         В зависимости от стороны, захватившей большинство порталов, а, следовательно, и всю аномалию, игроки получают возможность влиять на развитие всего сюжета Ingress.
         Участие в ивенте бесплатно. </p><br>
       <h3>Предстоящие мероприятия:</h3>
-  {% if  event_list %}
+  {% if  events %}
     <table id="modstable">
         <thead>
         <tr style="font-weight: bold; font-size: 22px; text-align: center">
@@ -22,9 +22,9 @@
         </tr>
         </thead>
         <tbody>
-      {% for event in event_list %}
+      {% for event in events %}
       <tr>
-          <td style="font-size: 20px; font-weight: bold; text-align: center"><a href="/event/detail/">{{ event.name }}</a></td>
+          <td style="font-size: 20px; font-weight: bold; text-align: center"><a href="{% url 'events:detail' event.id %}">{{ event.name|upper }}</a></td>
           <td style="text-align: center">{{ event.date }}</td>
           <td style="text-align: center">{{ event.location }}</td>
       </tr>

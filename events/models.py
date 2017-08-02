@@ -1,6 +1,6 @@
 from django.db import models
 
-class Event(models.Model):
+class Events(models.Model):
     name = models.CharField(max_length=200, unique=True, help_text='Название мероприятия')
     date = models.DateField(help_text='Дата проведения мероприятия')
     description = models.TextField(help_text='Описание мероприятия', blank=True)

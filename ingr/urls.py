@@ -13,8 +13,8 @@ urlpatterns = [
     url(r'^weapon/$', weapons_list),
     url(r'^history/$', views.history),
     url(r'^contacts/$', views.contacts),
-    url(r'^event/$', views.event),
-    url(r'^event/', include('events.urls')),
+    url(r'^events/$', views.events),
+    url(r'^events/', include('events.urls')),
 ]
 
 if settings.DEBUG:

@@ -5,6 +5,5 @@ from .views import event
 app_name = 'events'
 
 urlpatterns = [
-    url(r'^event/$', event),
-    url(r'^(?P<pk>\d+)$', views.EventDetailView.as_view(), name='detail')
+    url(r'^(?P<pk>\d+)/$', views.EventsDetailView.as_view(), name='detail'),
 ]

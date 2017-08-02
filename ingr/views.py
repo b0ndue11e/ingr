@@ -1,8 +1,8 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse, HttpResponseNotFound
-from django import forms
-from django.contrib import messages
-from events.models import EventReg, Event
+from django.http import HttpResponse, response
+from django.shortcuts import render
+from events.models import Events
+from django.views.generic.base import TemplateView
+from django.views.decorators.cache import cache_page
 
 def index(request):
     return render(request, 'index.html')
@@ -16,5 +16,6 @@ def history(request):
 def contacts(request):
     return render(request, 'contacts.html')
 
-def event(request):
-    return render(request, 'event.html')
+def events(request):
+    events = Events.objects.all()
+    return render(request, 'event.html', {'events': events})

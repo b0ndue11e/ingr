@@ -1,7 +1,7 @@
 from django import forms
-from .models import Event
+from .models import Events
 
-class EventModelForm(forms.ModelForm):
+class EventsModelForm(forms.ModelForm):
     class Meta:
-        model = Event
+        model = Events
         exclude = 0

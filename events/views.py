@@ -17,7 +17,7 @@ class EventsDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['event'] = Events.objects.filter(event=self.object.pk)
+        context['event'] = Events.objects.filter(id=self.object.pk)
         return context
 
 

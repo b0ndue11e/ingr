@@ -13,7 +13,6 @@ class Events(models.Model):
 
 
 class EventReg(models.Model):
-    event = models.ForeignKey('Events', on_delete='id', null=True, blank=True)
     name = models.CharField(max_length=255)
     surname = models.CharField(max_length=255)
     age = models.CharField(max_length=3)

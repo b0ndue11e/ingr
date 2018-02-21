@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Events
+from django import forms
 from django.views.generic.detail import DetailView
 
 
@@ -23,3 +24,7 @@ class EventsDetailView(DetailView):
 
 def event(request):
     return render(request, 'event.html')
+
+
+def regform(request):
+    return render(request,'events/reg.html')

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Events
+from django import forms
 from django.views.generic.detail import DetailView
 
 
@@ -17,9 +18,13 @@ class EventsDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['event'] = Events.objects.filter(event=self.object.pk)
+        context['event'] = Events.objects.filter(id=self.object.pk)
         return context
 
 
 def event(request):
     return render(request, 'event.html')
+
+
+def regform(request):
+    return render(request,'events/reg.html')

@@ -26,11 +26,6 @@ def event(request):
     return render(request, 'event.html')
 
 
-#class ModelEventRegForm(forms.ModelChoiceField):
-#    class Meta:
-#        model = EventReg
-
-
 class EventRegForm(forms.Form):
     name = forms.CharField(label='Имя', max_length=255)
     surname = forms.CharField(label='Фамилия', max_length=255)
@@ -46,6 +41,15 @@ def regform(request):
     if request.method == 'POST':
         event_regform = EventRegForm(request.POST)
         if event_regform.is_valid():
+            data = event_regform.cleaned_data
+            eventreg = EventReg()
+            eventreg.name = data['name']
+            eventreg.surname = data['surname']
+            eventreg.age = data['age']
+            eventreg.nickname = data['nickname']
+            eventreg.mail = data['mail']
+            eventreg.attendance = data['attendance']
+            eventreg.save()
             return redirect('/events/reg/')
 
     else:

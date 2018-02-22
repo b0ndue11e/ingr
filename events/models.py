@@ -21,7 +21,7 @@ class EventReg(models.Model):
     attendance = models.CharField(max_length=7, choices=(('yes', 'Online'),
                                                          ('no', 'Offline')))
     comment = models.TextField()
-    registation_date = models.DateTimeField(auto_now=True)
+    registration_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name

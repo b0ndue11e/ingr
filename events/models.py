@@ -13,13 +13,14 @@ class Events(models.Model):
 
 
 class EventReg(models.Model):
+    reg_to = models.ForeignKey('Events', on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
     surname = models.CharField(max_length=255)
     age = models.CharField(max_length=3)
     nickname = models.CharField(max_length=14)
     mail = models.EmailField(max_length=50, unique=True)
-    attendance = models.CharField(max_length=7, choices=(('yes', 'Online'), ('no', 'Offline')),
-                                  default='yes')
+    attendance = models.CharField(max_length=7, choices=(('yes', 'Online'),
+                                                         ('no', 'Offline')))
     comment = models.TextField()
     registration_date = models.DateTimeField(auto_now=True)
 

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Events, EventReg
 from django import forms
 from django.views.generic.detail import DetailView
+from django.contrib import messages
 
 
 class EventsDetailView(DetailView):
@@ -26,33 +27,24 @@ def event(request):
     return render(request, 'event.html')
 
 
-class EventRegForm(forms.Form):
-    name = forms.CharField(label='Имя', max_length=255)
-    surname = forms.CharField(label='Фамилия', max_length=255)
-    age = forms.CharField(label='Возраст', max_length=3)
-    nickname = forms.CharField(label='Псевдоним', max_length=14)
-    mail = forms.EmailField(label='Почтовый адрес')
-    attendance = forms.ChoiceField(label='Присутствие', choices=(('yes', 'Online'),
-                                                                 ('no', 'Offline')))
-    comment = forms.CharField(label='Комментарий', required=False)
-    
+class ModelEventRegForm(forms.ModelForm):
+    class Meta:
+        model = EventReg
+        exclude = ['comment']
+        labels = {'name': 'Имя', 'surname': 'Фамилия', 'age': 'Возраст',
+                  'nickname': 'Псевдоним', 'mail': 'Почтовый адрес',
+                  'attendance': 'Присутствие'}
+
 
 def regform(request):
     if request.method == 'POST':
-        event_regform = EventRegForm(request.POST)
+        event_regform = ModelEventRegForm(request.POST)
         if event_regform.is_valid():
-            data = event_regform.cleaned_data
-            eventreg = EventReg()
-            eventreg.name = data['name']
-            eventreg.surname = data['surname']
-            eventreg.age = data['age']
-            eventreg.nickname = data['nickname']
-            eventreg.mail = data['mail']
-            eventreg.attendance = data['attendance']
-            eventreg.save()
+            instance = event_regform.save()
+            messages.success(request, 'Вы успешно зарегистрированы!')
             return redirect('/events/reg/')
 
     else:
-        event_regform = EventRegForm()
+        event_regform = ModelEventRegForm(initial={'attendance': 'yes'})
 
-    return render(request,'events/reg.html', {'form': event_regform})
+    return render(request, 'events/reg.html', {'form': event_regform})

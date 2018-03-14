@@ -3,6 +3,8 @@ from .models import EventReg, Events
 from django import forms
 from django.views.generic.detail import DetailView
 from django.contrib import messages
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 class EventsDetailView(DetailView):
@@ -37,13 +39,18 @@ class ModelEventRegForm(forms.ModelForm):
 
 
 def regform(request, pk):
-    pk = id
+    pk=id
     if request.method == 'POST':
         event_regform = ModelEventRegForm(request.POST)
         if event_regform.is_valid():
             instance = event_regform.save()
             messages.success(request, 'Вы успешно зарегистрированы!')
-            return redirect('./')
+            subject = 'Ingress Events Team'
+            mail = request.POST.get('mail', '')
+            info = """Ваша заявка на участие в мероприятии принята! 
+            Надеемся вы хорошо проведете время. Спасибо за регистрацию. До встречи!"""
+            send_mail(subject, info, '', [mail], fail_silently=False)
+            return redirect('../')
 
     else:
         event_regform = ModelEventRegForm(initial={'attendance': 'yes'})

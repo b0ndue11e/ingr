@@ -9,6 +9,13 @@
     <h3>{{ event.0.name }}</h3>
     {{ event.0.description }}
       <p><h3><a href="reg/">Принять участие</a></h3></p>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
   </div>
 
 

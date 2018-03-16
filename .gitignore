@@ -93,3 +93,9 @@ ENV/
 
 # Settings
 settings.py
+
+#Pycache
+__pycache__/
+
+#Gitignore
+.gitignore

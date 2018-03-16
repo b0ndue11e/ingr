@@ -90,3 +90,6 @@ ENV/
 
 # IdeaFolder
 .idea
+
+# Settings
+settings.py

@@ -99,3 +99,10 @@ __pycache__/
 
 #Gitignore
 .gitignore
+
+#init
+__init__.py/
+
+# pyc/pyo
+*.pyc
+*.pyo

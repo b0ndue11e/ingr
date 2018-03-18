@@ -2,7 +2,6 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from . import views
 from django.conf import settings
-from django.views.generic.base import TemplateView
 from mods.views import mods_list
 from weapon.views import weapons_list
 

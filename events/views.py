@@ -39,7 +39,6 @@ class ModelEventRegForm(forms.ModelForm):
 
 
 def regform(request, pk):
-    pk=id
     if request.method == 'POST':
         event_regform = ModelEventRegForm(request.POST)
         if event_regform.is_valid():

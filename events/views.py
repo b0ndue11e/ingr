@@ -4,7 +4,6 @@ from django import forms
 from django.views.generic.detail import DetailView
 from django.contrib import messages
 from django.core.mail import send_mail
-from django.conf import settings
 
 
 class EventsDetailView(DetailView):
@@ -14,14 +13,14 @@ class EventsDetailView(DetailView):
 
     def get_queryset(self):
         qs = super().get_queryset()
-        event_id = self.request.GET.get('event_id', None)
-        if event_id:
-            qs = qs.filter(event=event_id)
+        event_name = self.request.GET.get('event_name', None)
+        if event_name:
+            qs = qs.filter(event=event_name)
         return qs
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['event'] = Events.objects.filter(id=self.object.pk)
+        context['event'] = Events.objects.filter(name=self.object.name)
         return context
 
 

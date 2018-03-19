@@ -1,6 +1,7 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
-{% block title %}Ingress Events{% endblock title %}
+{% block title %}{{ event.name }}{% endblock title %}
 
 {% block content %}
     <div id="reg" xmlns="http://www.w3.org/1999/html">

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import EventReg, Events
 from django import forms
 from django.views.generic.detail import DetailView
@@ -37,20 +37,25 @@ class ModelEventRegForm(forms.ModelForm):
                   'attendance': 'Присутствие', 'reg_to': 'Ивент'}
 
 
-def regform(request, pk):
-    if request.method == 'POST':
-        event_regform = ModelEventRegForm(request.POST)
-        if event_regform.is_valid():
-            instance = event_regform.save()
-            messages.success(request, 'Вы успешно зарегистрированы!')
-            subject = 'Ingress Events Team'
-            mail = request.POST.get('mail', '')
-            info = """Ваша заявка на участие в мероприятии принята! 
-            Надеемся вы хорошо проведете время. Спасибо за регистрацию. До встречи!"""
-            send_mail(subject, info, '', [mail], fail_silently=False)
-            return redirect('../')
+def register(request, pk):
+    post = request.method == 'POST'
+    data = request.POST
+    reg_to = get_object_or_404(Events, id=pk)
+    event_regform = ModelEventRegForm(data or None)
+    if post and event_regform.is_valid():
+        reg = event_regform.save(commit=True)
+        reg.reg_to = reg_to
+        reg.save
+        messages.success(request, 'Вы успешно зарегистрированы!')
+        subject = 'Ingress Events Team'
+        mail = request.POST.get('mail', '')
+        info = """Ваша заявка на участие в мероприятии принята! 
+                    Надеемся вы хорошо проведете время. Спасибо за регистрацию. До встречи!"""
+        send_mail(subject, info, '', [mail], fail_silently=False)
+        return redirect('../')
 
     else:
         event_regform = ModelEventRegForm(initial={'attendance': 'yes'})
 
     return render(request, 'events/reg.html', {'form': event_regform})
+
